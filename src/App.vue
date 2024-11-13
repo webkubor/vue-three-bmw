@@ -90,9 +90,9 @@ onMounted(() => {
   //引入加载器
   const loader = new GLTFLoader();//模型加载器
   const dracoLoader = new DRACOLoader();//模型解压的编译器
-  dracoLoader.setDecoderPath("../../public/roadSter/draco/gltf/");
+  dracoLoader.setDecoderPath("/roadSter/draco/gltf/");
   loader.setDRACOLoader(dracoLoader)
-  loader.load("../../public/roadSter/model/bmw01.glb",gltf => {
+  loader.load("/roadSter/model/bmw01.glb",gltf => {
     const bmw = gltf.scene
     //遍历模型
     bmw.traverse(child => {
